@@ -4,15 +4,15 @@ import "context"
 
 type UserHandler interface {
 	UserAuthHandler
-	Create(ctx context.Context,user User)(User,error)
-	Delete(ctx context.Context,userID string)error
-	Update(ctx context.Context,user User)(User,error)
-	List(ctx context.Context)([]User,error)
+	Create(ctx context.Context, user User) (User, error)
+	Delete(ctx context.Context, userID string) error
+	Update(ctx context.Context, user User) (User, error)
+	List(ctx context.Context) ([]User, error)
 }
 
 type UserAuthHandler interface {
-	GetUserByID(ctx context.Context,userID string)(User,error)
-	AuthUser(ctx context.Context,userID,password string) bool
+	GetUserByID(ctx context.Context, userID string) (User, error)
+	AuthUser(ctx context.Context, userID, password string) bool
 }
 
 type User interface {

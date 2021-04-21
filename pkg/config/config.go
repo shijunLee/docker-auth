@@ -1,10 +1,10 @@
 package config
 
-type AuthConfig struct {
+var GlobalServerConfig *ServerConfig
 
+type AuthConfig struct {
 }
 
 type ServerConfig struct {
-
+	Domain string
 }
-
